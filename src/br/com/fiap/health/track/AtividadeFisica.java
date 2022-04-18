@@ -2,84 +2,70 @@ package br.com.fiap.health.track;
 
 import java.time.LocalDate;
 
+/**
+ * Classe de domínio da entidade Atividade Física
+ */
 public class AtividadeFisica {
-	int seqOperacaoAtivfisica;
-	int codOperacaoAtivfisica;
-	LocalDate dtOperacaoAtivfisica;
-	int codAtivfisica;
-	String nomeAtivfisica;
-	LocalDate hrInicio;
-	LocalDate hrFim;
-	double qtTempoTotal;
-	double qtCalorias;
-	
-	public AtividadeFisica() {
-		
-	}
-	
-	//Construtor de classe
-	public AtividadeFisica(	int seqOperacaoAtivfisica, int codOperacaoAtivfisica, LocalDate dtOperacaoAtivfisica, int codAtivfisica, String nomeAtivfisica, LocalDate hrInicio, LocalDate hrFim, double qtTempoTotal, double qtCalorias) {
-		
-		this.seqOperacaoAtivfisica = seqOperacaoAtivfisica;
-		this.codOperacaoAtivfisica = codOperacaoAtivfisica;
-		this.dtOperacaoAtivfisica = dtOperacaoAtivfisica;
-		this.codAtivfisica = codAtivfisica;
-		this.nomeAtivfisica = nomeAtivfisica;
-		this.hrInicio = hrInicio;
-		this.hrFim = hrFim;
-		this.qtTempoTotal = qtTempoTotal;
-		this.qtCalorias = qtCalorias;
-		
-		}
 
-	public LocalDate getDtOperacaoAtivfisica() {
-		return dtOperacaoAtivfisica;
-	}
+    int idOperacaoAtivfisica;
+    LocalDate dtOperacaoAtivfisica;
+    LocalDate hrInicio;
+    LocalDate hrFim;
+    double qtTempoTotal;
+    TipoAtividadeFisica tipoAtividadeFisica;
 
-	public void setDtOperacaoAtivfisica(LocalDate dtOperacaoAtivfisica) {
-		this.dtOperacaoAtivfisica = dtOperacaoAtivfisica;
-	}
 
-	public String getNomeAtivfisica() {
-		return nomeAtivfisica;
-	}
+    /**
+     * @param idOperacaoAtivfisica Id da operação da atividade física
+     * @param dtOperacaoAtivfisica Data de operação da atividade física
+     * @param hrInicio             Hora de início da atividade
+     * @param hrFim                Hora de fim da atividade
+     * @param qtTempoTotal         tempo total da atividade
+     * @param tipoAtividadeFisica  Tipo da atividade física
+     */
+    public AtividadeFisica(int idOperacaoAtivfisica, LocalDate dtOperacaoAtivfisica,
+                           int codAtivfisica, String nomeAtivfisica, LocalDate hrInicio,
+                           LocalDate hrFim, double qtTempoTotal, double qtCalorias,
+                           TipoAtividadeFisica tipoAtividadeFisica) {
+        this.idOperacaoAtivfisica = idOperacaoAtivfisica;
+        this.dtOperacaoAtivfisica = dtOperacaoAtivfisica;
+        this.hrInicio = hrInicio;
+        this.hrFim = hrFim;
+        this.qtTempoTotal = qtTempoTotal;
+        this.tipoAtividadeFisica = tipoAtividadeFisica;
+    }
 
-	public void setNomeAtivfisica(String nomeAtivfisica) {
-		this.nomeAtivfisica = nomeAtivfisica;
-	}
+    public LocalDate getDtOperacaoAtivfisica() {
+        return dtOperacaoAtivfisica;
+    }
 
-	public LocalDate getHrInicio() {
-		return hrInicio;
-	}
+    public void setDtOperacaoAtivfisica(LocalDate dtOperacaoAtivfisica) {
+        this.dtOperacaoAtivfisica = dtOperacaoAtivfisica;
+    }
 
-	public void setHrInicio(LocalDate hrInicio) {
-		this.hrInicio = hrInicio;
-	}
+    public LocalDate getHrInicio() {
+        return hrInicio;
+    }
 
-	public LocalDate getHrFim() {
-		return hrFim;
-	}
+    public void setHrInicio(LocalDate hrInicio) {
+        this.hrInicio = hrInicio;
+    }
 
-	public void setHrFim(LocalDate hrFim) {
-		this.hrFim = hrFim;
-	}
+    public LocalDate getHrFim() {
+        return hrFim;
+    }
 
-	public double getQtTempoTotal() {
-		return qtTempoTotal;
-	}
+    public void setHrFim(LocalDate hrFim) {
+        this.hrFim = hrFim;
+    }
 
-	public void setQtTempoTotal(double qtTempoTotal) {
-		this.qtTempoTotal = qtTempoTotal;
-	}
+    public double getQtTempoTotal() {
+        return qtTempoTotal;
+    }
 
-	public double getQtCalorias() {
-		return qtCalorias;
-	}
+    public void setQtTempoTotal(double qtTempoTotal) {
+        this.qtTempoTotal = qtTempoTotal;
+    }
 
-	public void setQtCalorias(double qtCalorias) {
-		this.qtCalorias = qtCalorias;
-	}
-	
-		
 
 }

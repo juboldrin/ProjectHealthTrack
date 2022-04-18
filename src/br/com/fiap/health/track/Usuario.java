@@ -1,64 +1,84 @@
 package br.com.fiap.health.track;
 
-import java.io.Serializable;
+/**
+ * Classe de domínio da Entidade usuário
+ */
+public class Usuario {
 
-public class Usuario implements Serializable{
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	private String nomeUsuario;
-	private int nmCPF;
-	private int nmTelCelular;
-	private String endEmail;
-	
-	public Usuario() {
-		
-	}
-	
-	//Construtor de classe
-	public Usuario(String nomeUsuario, int nmCPF, int nmTelCelular, String endEmail) {
-		
-		this.nomeUsuario = nomeUsuario;
-		this.nmCPF = nmCPF;
-		this.nmTelCelular = nmTelCelular;
-		this.endEmail = endEmail;
-		
-	}
+    private String nomeCompleto;
+    private String dataNascimento;
+    private String genero;
+    private double altura;
+    private String email;
+    private String senha;
 
-	public String getNome() {
-		return nomeUsuario;
-	}
+    /**
+     * @param nomeCompleto   Nome completo da pessoa
+     * @param dataNascimento Data de nascimento da pessoa
+     * @param genero         Gênero (masculino ou Feminino)
+     * @param altura         Altura da pessoa em metros
+     * @param email          Endereço de e-mail
+     * @param senha          Senha de acesso da pessoa
+     */
+    public Usuario(String nomeCompleto, String dataNascimento, String genero, double altura, String email, String senha) {
+        this.nomeCompleto = nomeCompleto;
+        this.dataNascimento = dataNascimento;
+        this.genero = genero;
+        this.altura = altura;
+        this.email = email;
+        this.senha = senha;
+    }
 
-	public void setNome(String nomeUsuario) {
-		this.nomeUsuario = nomeUsuario;
-	}
+    public String getNomeCompleto() {
+        return nomeCompleto;
+    }
 
-	public int getNm_cpf() {
-		return nmCPF;
-	}
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
+    }
 
-	public void setNm_cpf(int nmCPF) {
-		this.nmCPF = nmCPF;
-	}
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
 
-	public int getNm_tel_celular() {
-		return nmTelCelular;
-	}
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
 
-	public void setNm_tel_celular(int nmTelCelular) {
-		this.nmTelCelular = nmTelCelular;
-	}
+    public String getGenero() {
+        return genero;
+    }
 
-	public String getEnd_email() {
-		return endEmail;
-	}
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
 
-	public void setEnd_email(String endEmail) {
-		this.endEmail = endEmail;
-	}
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    @Override public String toString() {
+        return "Usuario{" +
+               "nomeCompleto='" + nomeCompleto + '\'' +
+               ", dataNascimento='" + dataNascimento + '\'' +
+               ", genero='" + genero + '\'' +
+               ", altura=" + altura +
+               ", email='" + email + '\'' +
+               ", senha='" + senha + '\'' +
+               '}';
+    }
 }
 
 
